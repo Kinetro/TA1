@@ -37,7 +37,7 @@ class AlumnoAdapter(context: Context, var alumnos: ArrayList<Alumno>) : ArrayAda
         if (!fotoUrl.isNullOrBlank()) {
             Glide.with(context)
                 .load("https://sga.uteq.edu.ec" + fotoUrl)
-                .centerCrop()
+                .circleCrop()
                 .placeholder(R.drawable.ic_action_name)
                 .error(R.drawable.ic_action_name)
                 .into(imgAlumno)
